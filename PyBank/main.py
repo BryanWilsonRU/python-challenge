@@ -63,7 +63,6 @@ f"Average Change:${average}\n"
 f"Greatest Increase:${Inc[0], Inc[1]}\n"
 f"Greatest Decrease:${Dec[0], Dec[1]}")
 
-output_path = os.path.join("/Users/bryanwilson/Desktop/python-challenge/PyBank","Results.txt")
 
 with open(output_path, "w") as txt_file:
     txt_file.write(result)
