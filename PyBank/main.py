@@ -3,14 +3,18 @@ import os
 import csv
 
 #Store file path
-csvpath = os.path.join('/Users/bryanwilson/Desktop/Instructions/PyBank/Resources/budget_data.csv')
+csvpath = os.path.join('../Resources/budget_data.csv')
 
 
 #Opens CSV file to read and access
 with open(csvpath, newline='') as csvfile:
 
     csvreader = csv.reader(csvfile, delimiter=',')
-    print(csvreader)
+    
+    #Print Header
+    csv_header = next(csvreader)
+    print(f"CSV Header: {csv_header}")
+    
     #Skips header in CSV
     next(csvreader)
     
